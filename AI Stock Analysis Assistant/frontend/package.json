@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@crayonai/react-ui": "^0.9.5",
-    "@thesysai/genui-sdk": "^0.7.4",
+    "@crayonai/react-ui": "^0.9.15",
+    "@thesysai/genui-sdk": "^0.7.16",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

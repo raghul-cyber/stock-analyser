@@ -18,6 +18,20 @@ load_dotenv()
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
+
+
+@app.get('/')
+def read_root():
+    return {"message": "Backend is running. Please use the frontend at http://localhost:3000"}
+
+
 model = ChatOpenAI(
     model = 'c1/openai/gpt-5/v-20250930',
     base_url = 'https://api.thesys.dev/v1/embed/'
